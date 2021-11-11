@@ -1,0 +1,43 @@
+Permanent Marker', cursive;
+p, img {
+    margin: 0;
+    padding: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.main {
+    max-width: 1000px;
+    margin: 0 auto;
+    .characters {
+        text-align: center;
+    }
+    p {
+        font-family: @fontfamily;
+    }
+    .search {
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    input {
+        height: 40px;
+        font-family: @fontfamily;
+        font-size: 25px;
+        padding: 0 0 0 5px;
+    }
+    .eachCharacter {
+        width: 14%;
+        float: left;
+        padding: 1%;
+    }
+    .eachCharacter img {
+        width: 100%;
+        height: auto;
+    }
+    .eachCharacter p {
+        font-size: 14px;
+    }
+}

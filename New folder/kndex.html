@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main" ng-app="myApp">
+        <div class="characters" ng-controller="controller">
+            <p class="search">Search: <input type="text" value="" ng-model="search" /></p>
+            <div class="clear"></div>
+            <div style="display: grid;" class="eachCharacter" ng-repeat="character in data | filter : search">
+                <div class="characterImage">
+                    <img src="{{ character.image }}" alt="" />
+                </div>
+                <div class="characterName">
+                    <p>Name: {{ character.name }}</p>
+                </div>
+                <div class="prise">
+                    <p>prise: {{ character.prise }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js"></script>
+    <script>
+        angular.module("myApp", []).controller("controller", ["$scope", controller]);
+
+            function controller($scope) {
+                $scope.data = [
+                    {
+                        image:
+                            "./canon-powershot-sx70-hs.png",
+                        name: "canon-powershot-sx70",
+                        prise: "200jd"
+                    },
+                    {
+                        image:
+                            "./canon-powershot-sx70-hs.png",
+                        name: "77d",
+                        prise: "544jd"
+                    },
+                    {
+                        image:
+                            "./canon-powershot-sx70-hs.png",
+                        name: "30d",
+                        prise: "7jd"
+                    },
+                    {
+                        image:
+                            "./canon-powershot-sx70-hs.png",
+                        name: "pro",
+                        prise: "555jd"
+                    },
+                    {
+                        image:
+                            "./canon-powershot-sx70-hs.png",
+                        name: "rt",
+                        prise: "444jd"
+                    },
+                    {
+                        image:
+                            "./canon-powershot-sx70-hs.png",
+                        name: "etet Jay",
+                        prise: "222js"
+                    }
+                ];
+            }
+
+    </script>
+</body>
+</html>
